@@ -1,0 +1,25 @@
+import random
+pos=[[70,10],[60,10],[50,10],[40,10],[30,10],[20,10],[10,10]]
+px,py=random.randint(1,49),random.randint(1,49)
+px*=10
+py*=10
+
+def check():
+    global pos
+    n=len(pos)
+    if (pos[0][0]==490 and pos[1][0]!=490):
+        temp=[pos[0][0],pos[0][1]]
+        pos[0]=[490,temp[1]+10]
+        shift(temp)
+    if (pos[0][0]==10 and pos[1][0]!=10):
+        temp=[pos[0][0],pos[0][1]]
+        pos[0]=[10,temp[1]-10]
+        shift(temp)
+    if (pos[0][1]==490 and pos[1][1]!=490):
+        temp=[pos[0][0],pos[0][1]]
+        pos[0]=[temp[0]-10,490]
+        shift(temp)
+    if (pos[0][1]==10 and pos[1][1]!=10):
+        temp=[pos[0][0],pos[0][1]]
+        pos[0]=[temp[0]+10,10]
+        shift(temp)
