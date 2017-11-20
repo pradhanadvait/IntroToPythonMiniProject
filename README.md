@@ -1,1 +1,1 @@
-# IntroToPythonMiniProject
+# IntroToPythonMiniProject - Snake
